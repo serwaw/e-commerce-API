@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ApiConfiguration {
     @Bean
-    public ProductCostController productCostController() {
-        return new ProductCostController();
+    public ProductCostController productCostController(ProductService productService) {
+        return new ProductCostController(productService);
     }
 }
