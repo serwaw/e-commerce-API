@@ -24,8 +24,8 @@ public class ProductService {
         }
     }
 
-    public double findTotalCost(ArrayList<String> productIds) {
-        double totalCost = 0.0;
+    public int findTotalCost(ArrayList<String> productIds) {
+        int totalCost = 0;
         Map<String, Integer> productCounts = new HashMap<>();
 
         for (String productId : productIds) {
