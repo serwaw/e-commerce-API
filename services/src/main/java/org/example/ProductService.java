@@ -43,7 +43,7 @@ public class ProductService {
                     totalCost += discountedQuantity * product.price();
                 } else if (Objects.equals(productId, "002") && quantity >= 2) {
                     int discountedQuantity = (quantity / 2) + (quantity % 2);
-                    totalCost += discountedQuantity * product.price() * 0.5;
+                    totalCost += product.price() * quantity - (discountedQuantity * product.price() * 0.5);
                 } else {
                     totalCost += quantity * product.price();
                 }
