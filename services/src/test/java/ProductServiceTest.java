@@ -1,11 +1,6 @@
-import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
 import java.util.ArrayList;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-import org.example.ProductRepository;
 import org.example.ProductService;
 import org.junit.Before;
 import org.junit.Test;
