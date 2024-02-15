@@ -38,10 +38,12 @@ public class ProductService {
 
             Product product = productRepository.getProductById(productId);
             if (product != null) {
+                //Every third product is free
                 if (Objects.equals(productId, "001")) {
                     int discountedQuantity = quantity / 3 * 2 + quantity % 3;
                     totalCost += discountedQuantity * product.price();
                 } else if (Objects.equals(productId, "002") && quantity >= 2) {
+                    //Every second product is half the price
                     int discountedQuantity = (quantity / 2) + (quantity % 2);
                     totalCost += product.price() * quantity - (discountedQuantity * product.price() * 0.5);
                 } else {
